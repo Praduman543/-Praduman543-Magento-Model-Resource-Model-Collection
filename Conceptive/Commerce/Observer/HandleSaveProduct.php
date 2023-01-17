@@ -17,11 +17,12 @@ class HandleSaveProduct implements ObserverInterface
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
         $params = $this->request->getParams();
-        $customFieldData = $params['MageDelight'];
-        echo "<pre>";
-        print_r($customFieldData);exit;
+        $customFieldData = $params['PublisherImages'];
+        // echo "<pre>";
+        // print_r($observer->getData());exit;
 
         $product = $observer->getProduct();
+        $product->setImage($customFieldData['image'][0]['name']);
         $sku = $product->getSku();
         $id = $product->getId();
         $name = $product->getName();
