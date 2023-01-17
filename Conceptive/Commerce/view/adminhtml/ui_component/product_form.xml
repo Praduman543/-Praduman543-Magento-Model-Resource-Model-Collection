@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="MageDelight">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string">MageDelight Custom Fields</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="dataScope" xsi:type="string">data.MageDelight</item>
+                <item name="sortOrder" xsi:type="number">10</item>
+            </item>
+        </argument>
+        <field name="status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Status</item>
+                    <item name="dataScope" xsi:type="string">status</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="componentType" xsi:type="string">field</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="options" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="value" xsi:type="number">0</item>
+                            <item name="label" xsi:type="string">Inactive</item>
+                        </item>
+                        <item name="1" xsi:type="array">
+                            <item name="value" xsi:type="number">1</item>
+                            <item name="label" xsi:type="string">Active</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="textField">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Text Field</item>
+                    <item name="dataScope" xsi:type="string">textField</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                    <item name="componentType" xsi:type="string">field</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                </item>
+            </argument>
+        </field>
+        <field name="image">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">string</item>
+                <item name="source" xsi:type="string">geolocation</item>
+                <item name="label" xsi:type="string" translate="true">Image Of Restorent</item>
+                <item name="visible" xsi:type="boolean">true</item>
+                <item name="formElement" xsi:type="string">imageUploader</item>
+                <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                <item name="isMultipleFiles" xsi:type="boolean">true</item>
+                <item name="dataScope" xsi:type="string">image</item>
+                <item name="uploaderConfig" xsi:type="array">
+                    <item name="url" xsi:type="url" path="conceptive/feature_image/upload"/>
+                </item>
+            </item>
+        </argument>
+    </field>
+        <!-- <field formElement="imageUploader" name="image" sortOrder="40" >
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">Demo</item>
+                    <item name="dataScope" xsi:type="string">image</item>
+                </item>
+            </argument>
+            <settings>
+                <elementTmpl>ui/form/element/uploader/image</elementTmpl>
+                <dataType>string</dataType>
+                <label translate="true">Image</label>
+                <visible>true</visible>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <imageUploader>
+                    <settings>
+                        <required>true</required>
+                        <uploaderConfig>
+                            <param xsi:type="url" name="url" path="conceptive/feature_image/upload"/>
+                        </uploaderConfig>
+                        <previewTmpl>Conceptive_Commerce/image-preview</previewTmpl>
+                        <openDialogTitle>Media Gallery</openDialogTitle>
+                        <allowedExtensions>jpg jpeg gif png</allowedExtensions>
+                        <maxFileSize>4194304</maxFileSize>
+                    </settings>
+                </imageUploader>
+            </formElements>
+        </field> -->
+    </fieldset>
+</form>
